@@ -313,10 +313,10 @@ const int BOARD_SIZE= 25;
     CGFloat minDimension=MIN(xDimension, yDimension);
     
     //For as yet unknown reason, board drawing was half-sized on actual device
-    CGFloat leftX= 2*xIdx * minDimension/BOARD_SIZE;
-    CGFloat rightX= 2*(xIdx+1) * minDimension/BOARD_SIZE;
-    CGFloat bottomY= 2*yIdx * minDimension/BOARD_SIZE;
-    CGFloat topY= 2*(yIdx+1) * minDimension/BOARD_SIZE;
+    CGFloat leftX= xIdx * minDimension/BOARD_SIZE;
+    CGFloat rightX= (xIdx+1) * minDimension/BOARD_SIZE;
+    CGFloat bottomY= yIdx * minDimension/BOARD_SIZE;
+    CGFloat topY= (yIdx+1) * minDimension/BOARD_SIZE;
     
     //now let's draw a filled-in polygon! Here are the 4 vertices
     CGPoint bottomLeft = ccp(leftX,bottomY);
